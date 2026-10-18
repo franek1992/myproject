@@ -1,10 +1,19 @@
 from django.shortcuts import render
 
-# Przywrócona funkcja strony głównej lab1
 def lab1_home(request):
-    return render(request, 'LAB1_hobby/home.html') # upewnij się, że nazwa szablonu jest zgodna z Twoją
+    context = {
+        "hobby_name": "Moja pasja: Fotografowanie",
+        "description": "Tutaj dzielę się moimi ulubionymi kadrami, technikami oraz sprzętem."
+    }
+    return render(request, 'LAB1_hobby/home.html', context)
 
-# Funkcja galerii, którą dodaliśmy wcześniej
+def lab1_about(request):
+    context = {
+        "hobby_name": "O moim hobby",
+        "description": "Fotografia to dla mnie sposób na zatrzymanie czasu i pokazywanie świata własnymi oczami."
+    }
+    return render(request, 'LAB1_hobby/about.html', context)
+
 def lab1_gallery(request):
     context = {
         "title": "Moja Galeria",
@@ -15,6 +24,3 @@ def lab1_gallery(request):
         ]
     }
     return render(request, 'LAB1_hobby/gallery.html', context)
-
-def lab1_about(request):
-    return render(request, 'LAB1_hobby/about.html')

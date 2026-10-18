@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block content %}
-    <h2>{{ title }}</h2>
-    
-    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
+    <h2>Moja Galeria</h2>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         {% for photo in photos %}
-            <div style="text-align: center; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <img src="{% static 'LAB1_hobby/images/'|add:photo.filename %}" alt="{{ photo.title }}" style="width: 250px; height: 170px; object-fit: cover; border-radius: 5px;">
-                <p style="margin-top: 10px; font-weight: bold; color: #2c3e50;">{{ photo.title }}</p>
+            <div style="text-align: center;">
+                <!-- Tutaj kluczowy jest prefiks static -->
+                <img src="{% static 'LAB1_hobby/images/'|add:photo.filename %}" alt="{{ photo.title }}" style="width: 200px; height: 150px; object-fit: cover; border-radius: 4px;">
+                <p>{{ photo.title }}</p>
             </div>
         {% endfor %}
     </div>
