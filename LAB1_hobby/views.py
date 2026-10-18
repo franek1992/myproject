@@ -9,8 +9,8 @@ def lab1_home(request):
 
 def lab1_about(request):
     context = {
-        "hobby_name": "O moim hobby",
-        "description": "Fotografia to dla mnie coś więcej niż tylko robienie zdjęć – to sposób patrzenia na świat i zatrzymywania czasu."
+        "title": "O moim hobby",
+        "details": "Fotografia to dla mnie sposób na zatrzymanie czasu i pokazywanie świata własnymi oczami."
     }
     return render(request, 'LAB1_hobby/about.html', context)
 
