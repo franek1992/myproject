@@ -3,14 +3,14 @@ from django.shortcuts import render
 def lab1_home(request):
     context = {
         "hobby_name": "Moja pasja: Fotografowanie",
-        "description": "Tutaj dzielę się moimi ulubionymi kadrami, technikami oraz sprzętem."
+        "description": "Tutaj dzielę się moimi ulubionymi kadrami, technikami oraz sprzętem, którego używam do uwieczniania chwil."
     }
     return render(request, 'LAB1_hobby/home.html', context)
 
 def lab1_about(request):
     context = {
         "hobby_name": "O moim hobby",
-        "description": "Fotografia to dla mnie sposób na zatrzymanie czasu i pokazywanie świata własnymi oczami."
+        "description": "Fotografia to dla mnie coś więcej niż tylko robienie zdjęć – to sposób patrzenia na świat i zatrzymywania czasu."
     }
     return render(request, 'LAB1_hobby/about.html', context)
 
