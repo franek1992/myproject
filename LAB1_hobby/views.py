@@ -15,3 +15,5 @@ def lab1_gallery(request):
         ]
     }
     return render(request, 'LAB1_hobby/gallery.html', context)
+    def lab1_about(request):
+    return render(request, 'LAB1_hobby/about.html')
