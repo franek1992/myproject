@@ -1,0 +1,10 @@
+{% extends "LAB1_hobby/base.html" %}
+
+{% block content %}
+    <h2>{{ title }}</h2>
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

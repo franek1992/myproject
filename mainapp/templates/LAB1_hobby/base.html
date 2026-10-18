@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Moja Pasja{% endblock %}</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: #2c3e50; color: #fff; padding: 1.5rem; text-align: center; }
+        nav { display: flex; justify-content: center; gap: 20px; background: #34495e; padding: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; color: #3498db; }
+        .container { display: flex; flex-direction: column; align-items: center; padding: 30px; flex-grow: 1; }
+        .content { background: white; padding: 30px; border-radius: 8px; width: 80%; max-width: 800px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        footer { text-align: center; padding: 15px; background: #2c3e50; color: white; margin-top: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Moje Hobby: Fotografia</h1>
+    </header>
+    <!-- Menu nawigacyjne do pozostałych stron[cite: 36] -->
+    <nav>
+        <a href="{% url 'main_home' %}">Wróć do Kafelków</a>
+        <a href="{% url 'lab1_home' %}">Start</a>
+        <a href="{% url 'lab1_about' %}">O hobby</a>
+        <a href="{% url 'lab1_gallery' %}">Galeria</a>
+    </nav>
+    <main class="container">
+        <section class="content">
+            <!-- Miejsce, w które zostaną wstrzyknięte treści z innych szablonów[cite: 32] -->
+            {% block content %}
+            {% endblock %}
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Laboratorium 1 - Akademia im. Jakuba z Paradyża</p>
+    </footer>
+</body>
+</html>

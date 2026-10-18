@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybór Laboratorium</title>
+    <style>
+        body { font-family: sans-serif; background: #eaeaea; text-align: center; padding: 50px; }
+        h1 { margin-bottom: 40px; color: #333; }
+        .grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .tile { 
+            background: #007bff; color: white; padding: 40px; border-radius: 10px; 
+            text-decoration: none; font-size: 1.5rem; font-weight: bold; 
+            width: 200px; transition: transform 0.3s, background 0.3s; 
+        }
+        .tile:hover { background: #0056b3; transform: scale(1.05); }
+        .tile.disabled { background: #999; cursor: not-allowed; }
+        .tile.disabled:hover { transform: none; background: #999; }
+    </style>
+</head>
+<body>
+    <h1>Zadania z Programowania Internetowego</h1>
+    <div class="grid">
+        <!-- Odnośnik do LAB1 wykorzystujący nazwę ścieżki z pliku urls.py -->
+        <a href="{% url 'lab1_home' %}" class="tile">LAB 1</a>
+        <a href="#" class="tile disabled">LAB 2 (wkrótce)</a>
+        <a href="#" class="tile disabled">LAB 3 (wkrótce)</a>
+    </div>
+</body>
+</html>
