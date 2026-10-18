@@ -1,3 +1,10 @@
+from django.shortcuts import render
+
+# Przywrócona funkcja strony głównej lab1
+def lab1_home(request):
+    return render(request, 'LAB1_hobby/home.html') # upewnij się, że nazwa szablonu jest zgodna z Twoją
+
+# Funkcja galerii, którą dodaliśmy wcześniej
 def lab1_gallery(request):
     context = {
         "title": "Moja Galeria",
